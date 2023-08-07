@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-SINGLES = "https://www.cardmarket.com/en/Pokemon/Users/Druda/Offers/Singles"
+SINGLES = "https://www.cardmarket.com/en/Pokemon/Users/PROFILE/Offers/Singles"
 
 def save_data_to_json(filename, data):
     with open(filename, 'w', encoding='utf-8') as json_file:
@@ -190,8 +190,8 @@ def check_price(driver, overall_price_change_label, change_price_all_button):
 
 if __name__ == "__main__":
     options = Options()
-    options.add_argument("--headless")  # Uncomment this line to run Chrome in headless mode
-    driver = webdriver.Chrome(options=options)  # You'll need to download and set up chromedriver
+    options.add_argument("--headless")  
+    driver = webdriver.Chrome(options=options)  
     driver.implicitly_wait(10)
 
     if os.path.exists('login_credentials.json'):
