@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import json
 import os
 import tkinter as tk
@@ -222,7 +223,7 @@ if __name__ == "__main__":
         password_entry = tk.Entry(main_window, show="*")
         password_entry.pack(pady=5)
 
-        save_button = tk.Button(main_window, text="Save Credentials", command=lambda: save_login_credentials(driver, username_entry, password_entry, main_window))
+        save_button = tk.Button(main_window, text="Save Credentials", command=lambda: save_login_credentials(username_entry, password_entry))
         save_button.pack(pady=10)
                                                                                                     
         main_window.mainloop()
